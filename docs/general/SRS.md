@@ -34,24 +34,23 @@ Design system: `design/design-system.md`
 
 ### 4.1 Hello Word landing page
 
-**Requirement GENERAL-001 — show stored message in page center**
+**Requirement GENERAL-001 — show centered message**
 
-*As a* Visitor, *I want to* see one centered message on page load, *so that* I can confirm app renders stored content end to end.
+*As a* Visitor, *I want to* see one centered message on page load, *so that* I can read the screen shown in the approved design.
 
 Behaviour:
 
-1. When Visitor opens landing page, system shows one centered message on plain white background.
-2. When backend API returns stored text value, frontend uses returned value for visible message.
-3. When database value is "Hello Word", page shows "Hello Word" exactly, with same casing and spacing.
-4. When text value changes in stored row, next page load shows latest stored value returned by API.
+1. When Visitor opens landing page, system shows one message centered horizontally and vertically on plain white background.
+2. The visible message text is `Hello Word` exactly, with same casing and spacing as in approved design.
+3. No other visible content appears on the page.
 
 **Acceptance criteria** — each maps one-to-one onto a test case in `docs/general/test-cases/hello-word-landing-page.md`.
 
 | # | Given | When | Then |
 |---|---|---|---|
 | AC-1 | Visitor opens landing page | Page loads successfully | One message is centered horizontally and vertically on white background |
-| AC-2 | Stored row contains `Hello Word` | Page requests message from API and renders response | Visible text is `Hello Word` exactly |
-| AC-3 | Stored row contains a different non-empty message | Visitor reloads page after backend serves new value | Page shows new stored value and no hardcoded fallback text |
+| AC-2 | Page renders | Visitor reads visible content | Visible text is `Hello Word` exactly |
+| AC-3 | Page renders | Visitor scans screen | No other visible content appears |
 
 **Failure, boundary and permission behaviour**
 
@@ -63,7 +62,7 @@ Behaviour:
 
 | Field | Type | Required | Rule |
 |---|---|---|---|
-| landing page message text | text | yes | One non-empty string stored in PostgreSQL and returned by API without client-side hardcoding |
+| landing page message text | text | yes | One non-empty string shown on the landing page |
 
 ## 5. Screens
 
