@@ -78,7 +78,7 @@ func (a *app) migrate(ctx context.Context) error {
 		return err
 	}
 
-	entries, err := fs.ReadDir(migrations, "migrations")
+	entries, err := fs.ReadDir(migrations.Files, ".")
 	if err != nil {
 		return err
 	}
