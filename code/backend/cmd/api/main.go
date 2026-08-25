@@ -99,7 +99,7 @@ func (a *app) migrate(ctx context.Context) error {
 		if exists {
 			continue
 		}
-		sql, err := migrations.ReadFile("migrations/" + name)
+		sql, err := migrations.Files.ReadFile(name)
 		if err != nil {
 			return err
 		}
