@@ -1,0 +1,17 @@
+.root {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 100vh;
+  text-align: center;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.message {
+  margin: 0;
+  font-size: var(--text-3xl);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
