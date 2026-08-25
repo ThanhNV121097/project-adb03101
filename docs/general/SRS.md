@@ -76,7 +76,7 @@ The design is source of truth for appearance; this section maps functions onto i
 
 | Area | Requirement |
 |---|---|
-| Performance | Landing page renders centered text within 2 seconds on a typical local deployment after browser receives response. |
+| Performance | Landing page shows centered text within 2 seconds after browser receives HTTP 200 response from app on a typical local deployment. |
 | Accessibility | Message remains readable with black text on white background and centered content does not rely on color alone. |
 | Responsive | Page stays centered from 320px width upward with no horizontal scroll. |
 | Privacy | No personal data is stored or displayed. |
