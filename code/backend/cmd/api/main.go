@@ -2,7 +2,6 @@ package main
 
 import (
 	"context"
-	"embed"
 	"encoding/json"
 	"errors"
 	"fmt"
@@ -14,11 +13,9 @@ import (
 	"strings"
 	"time"
 
+	"github.com/ThanhNV121097/project-adb03101/backend/migrations"
 	"github.com/jackc/pgx/v5/pgxpool"
 )
-
-//go:embed migrations/*.up.sql
-var migrations embed.FS
 
 type app struct {
 	db    *pgxpool.Pool
